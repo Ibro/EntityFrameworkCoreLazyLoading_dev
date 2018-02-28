@@ -30,8 +30,12 @@ namespace EntityFrameworkCoreLazyLoading_dev
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            {
+	            options
+				    .UseLazyLoadingProxies()
+		            .UseSqlServer(
+		            Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.Stores.MaxLengthForKeys = 128)
                 .AddEntityFrameworkStores<ApplicationDbContext>()
