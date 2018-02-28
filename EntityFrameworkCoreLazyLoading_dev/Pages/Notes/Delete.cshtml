@@ -1,5 +1,5 @@
 ﻿@page
-@model EntityFrameworkCoreLazyLoading_dev.Pages.Notes.DeleteModel
+@model Notes.DeleteModel
 
 @{
     ViewData["Title"] = "Delete";
@@ -17,6 +17,12 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Note.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note.Category.Id)
         </dd>
     </dl>
     

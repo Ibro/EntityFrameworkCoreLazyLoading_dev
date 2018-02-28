@@ -1,5 +1,5 @@
 ﻿@page
-@model EntityFrameworkCoreLazyLoading_dev.Pages.Notes.CreateModel
+@model Notes.CreateModel
 
 @{
     ViewData["Title"] = "Create";
@@ -17,6 +17,10 @@
                 <label asp-for="Note.Title" class="control-label"></label>
                 <input asp-for="Note.Title" class="form-control" />
                 <span asp-validation-for="Note.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Note.Category" class="control-label"></label>
+                <select asp-for="Note.CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

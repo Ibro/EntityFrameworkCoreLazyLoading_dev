@@ -1,5 +1,5 @@
 ﻿@page
-@model EntityFrameworkCoreLazyLoading_dev.Pages.Notes.DetailsModel
+@model Notes.DetailsModel
 
 @{
     ViewData["Title"] = "Details";
@@ -16,6 +16,12 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Note.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Note.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Note.Category.Id)
         </dd>
     </dl>
 </div>

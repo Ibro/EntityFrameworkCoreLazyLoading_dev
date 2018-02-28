@@ -23,6 +23,8 @@ namespace EntityFrameworkCoreLazyLoading_dev.Data
 
 		public string Title { get; set; }
 
+		public string CategoryId { get; set; }
+
 		public virtual Category Category { get; set; }
 	}
 
